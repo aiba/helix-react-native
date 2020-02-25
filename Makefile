@@ -8,10 +8,10 @@ clean:
 	rm -rf .shadow-cljs react-native/target
 
 shadow:
-	npx shadow-cljs@2.8.85 watch dev
+	clj -m shadow.cljs.devtools.cli watch dev
 
 repl:
-	npx shadow-cljs@2.8.85 cljs-repl dev
+	clj -m shadow.cljs.devtools.cli cljs-repl dev
 
 bundler:
 	cd react-native && yarn start --reset-cache

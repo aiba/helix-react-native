@@ -1,5 +1,4 @@
-{:source-paths ["src"],
- :dependencies [[lilactown/helix "0.0.8"]],
+{:deps true
  :builds {:dev {:target :react-native,
                 :init-fn myapp.main/init,
                 :output-dir "react-native/target",
