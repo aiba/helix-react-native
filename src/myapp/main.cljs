@@ -1,6 +1,12 @@
 (ns myapp.main
   (:require ["react-native" :as rn]
-            [helix.core :refer [defnc $]]))
+            [helix.core :refer [defnc $]]
+            [helix.experimental.refresh :as refresh]))
+
+(refresh/inject-hook!)
+
+(defn ^:dev/after-load after-load []
+  (refresh/refresh!))
 
 (defnc Root [props]
   {:helix/features {:fast-refresh true}}
