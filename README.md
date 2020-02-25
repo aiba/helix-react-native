@@ -7,6 +7,14 @@ An example live-reloading ClojureScript project that combines:
 * [shadow-cljs](http://shadow-cljs.org/)
 * [helix](https://github.com/Lokeh/helix)
 
+**Note:** fast refresh not currently working.
+
+### Setup:
+
+```
+$ ( cd react-native && yarn install )
+```
+
 ### Running:
 
 ```
