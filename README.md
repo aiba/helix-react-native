@@ -7,7 +7,8 @@ An example live-reloading ClojureScript project that combines:
 * [shadow-cljs](http://shadow-cljs.org/)
 * [helix](https://github.com/Lokeh/helix)
 
-**Note:** fast refresh not currently working.
+This uses helix's integration with react-native fast-refresh for the live-reloading,
+which works great!
 
 ### Setup:
 
@@ -22,3 +23,8 @@ $ make shadow
 $ make bundler
 $ make ios
 ```
+
+**Note:** The first time you run the simulator, you must press Command-D and then
+click "Disable Fast Refresh". This will disable react-native's automatic
+fast-refreshing. Instead, we are manually calling
+`helix.experimental.refresh/refresh!` after shadow-cljs recompiles/reloads.
