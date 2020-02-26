@@ -2,7 +2,7 @@
 init-react-native:
 	npx react-native@0.61.5 init MyApp
 	mv MyApp react-native
-
+	cd react-native && echo 'import "./target/index.js";' > index.js
 
 clean:
 	rm -rf .shadow-cljs react-native/target
